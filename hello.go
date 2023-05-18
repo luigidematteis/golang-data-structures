@@ -5,9 +5,15 @@ import "learning/arrays"
 
 func main() {
 	fmt.Println("Hello, World!")
-	letMeKnowIfPalindrome("Hello")
-	letMeKnowIfPalindrome("racecar")
-	letMeKnowIfPalindrome("abcdedcba")
+
+	// check if the words are palindromes
+	//letMeKnowIfPalindrome("Hello")
+	//letMeKnowIfPalindrome("racecar")
+	//letMeKnowIfPalindrome("abcdedcba")
+
+	// check if in the given arr there is a pair of value that is the sum of the target
+	nums := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	arrays.TwoSum(nums, 112)
 }
 
 func letMeKnowIfPalindrome(word string) {

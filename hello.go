@@ -12,10 +12,12 @@ func main() {
 	letMeKnowIfPalindrome("abcdedcba")
 
 	// check if in the given arr there is a pair of value that is the sum of the target
-	nums := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	arrays.TwoSum(nums, 112)
+	arrays.TwoSum([]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 112)
 
 	arrays.FindSumOfTwoNumbersEqualToTargetGivenAnUnsortedArray([]int{3, 2, 4}, 6)
+
+	// given two sorted integer arrays, return an array that combines both of them and is also sorted
+	arrays.CombineArrays([]int{1, 4, 7, 20, 32}, []int{3, 5, 6})
 }
 
 func letMeKnowIfPalindrome(word string) {

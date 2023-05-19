@@ -4,7 +4,12 @@ import "fmt"
 
 func CombineArrays(array1 []int, array2 []int) {
 
-	var combinedArrays []int
+	// declaring the array as:
+	// var combinedArrays []int
+	// the time complexity will be O(n+m) due to the dynamic reallocation
+	// of the underlying array during the append operations
+	// so, to improve performance we can declare the array as follow:
+	combinedArrays := make([]int, 0, len(array1)+len(array2))
 
 	i := 0
 	j := 0

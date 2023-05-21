@@ -17,7 +17,11 @@ func main() {
 	arrays.FindSumOfTwoNumbersEqualToTargetGivenAnUnsortedArray([]int{3, 2, 4}, 6)
 
 	// given two sorted integer arrays, return an array that combines both of them and is also sorted
-	arrays.CombineArrays([]int{1, 4, 7, 20, 32}, []int{3, 5, 6})
+	arrays.CombineArrays([]int{1, 4, 7, 20, 32}, []int{3, 5, 6})\
+
+	// given two strings s and t, return true if s is a subsequence of t, or false otherwise
+	var isSubsequence = arrays.IsSubsequence("ace", "abcde")
+	fmt.Println(isSubsequence)
 }
 
 func letMeKnowIfPalindrome(word string) {

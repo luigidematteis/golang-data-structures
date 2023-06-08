@@ -24,6 +24,8 @@ func main() {
 	//fmt.Println(isSubsequence)
 
 	arrays.ReverseString([]byte("hello"))
+
+	arrays.ReverseString2([]byte("hello"))
 }
 
 func letMeKnowIfPalindrome(word string) {

@@ -25,7 +25,7 @@ func main() {
 
 	arrays.ReverseString([]byte("hello"))
 
-	arrays.ReverseString2([]byte("hello"))
+	arrays.ReverseString2([]byte("Hannah"))
 }
 
 func letMeKnowIfPalindrome(word string) {

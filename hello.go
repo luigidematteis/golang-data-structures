@@ -25,16 +25,15 @@ func main() {
 
 	// reverse strings
 	arrays.ReverseString([]byte("hello"))
-
 	arrays.ReverseString2([]byte("Hannah"))
 
-	// square of a sorted array
-	arrays.SortNumsArray([]int{-4, -1, 0, 3, 10})
-	arrays.SortNumsArray([]int{-4, -1, 0, 3, 10, 0, 0, 1032})
-	arrays.SortNumsArray([]int{-1})
-	arrays.SortNumsArray([]int{-5, -3, -2, -1})
-	arrays.SortNumsArray([]int{-7, -3, 2, 3, 11, 11, 3})
-	arrays.SortNumsArray([]int{
+	//square of a sorted array
+	arrays.SortedSquares([]int{-4, -1, 0, 3, 10})
+	arrays.SortedSquares([]int{-1})
+	arrays.SortedSquares([]int{-5, -3, -2, -1})
+	arrays.SortedSquares([]int{-7, -3, 2, 3, 11, 11, 3})
+	arrays.SortedSquares([]int{-4, -1, 0, 3, 10, 0, 0, 1032, 3, 3, 0, 3})
+	arrays.SortedSquares([]int{
 		-997, -997, -990, -987, -982, -982, -980, -980, -979, -978, -974, -973, -972, -972, -966, -965, -964,
 		-963, -962, -959, -957, -957, -956, -955, -952, -952, -950, -948, -947, -944, -944, -943, -940, -932,
 		-926, -925, -924, -919, -918, -918, -917, -917, -916, -915, -913, -913, -911, -909, -906, -905, -904,
@@ -88,6 +87,7 @@ func main() {
 		919, 923, 923, 924, 926, 926, 926, 930, 933, 937, 937, 938, 941, 941, 944, 944, 945, 948, 948, 948, 949,
 		950, 952, 960, 960, 961, 968, 970, 971, 973, 973, 977, 979, 980, 983, 986, 992, 992, 992, 993, 995, 996,
 		997})
+
 }
 
 func letMeKnowIfPalindrome(word string) {

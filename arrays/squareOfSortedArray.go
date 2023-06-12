@@ -2,45 +2,50 @@ package arrays
 
 import "fmt"
 
-func SquareOfSortedArray(nums []int) []int {
-	squaredNums := make([]int, 0, len(nums))
+func SortNumsArray(nums []int) []int {
+
+	fmt.Println("Original array:", nums)
+
+	squaredNums := make([]int, 0, len(nums)-1)
 
 	for _, num := range nums {
 		squaredNums = append(squaredNums, num*num)
+
+		if len(nums) == 1 {
+			fmt.Println("The array contains only 1 member:", squaredNums)
+			return squaredNums
+		}
 	}
-	fmt.Println("Squared nums: ", squaredNums)
+
+	fmt.Println("Squared array:", squaredNums)
 
 	var i = 0
+	sortedArray := make([]int, len(nums))
 
 	for i <= len(squaredNums)-1 {
-		fmt.Println("Iteration number:", i+1)
+		var currNumberIndex = 0
+		var currNumber = squaredNums[i]
 
-		var w = 1
-
-		var curr = squaredNums[i]
-
-		fmt.Println("Array status at this step:", squaredNums)
-		fmt.Println("Current value", curr, "at index", i, "is compared with", squaredNums[w], "at index:", w)
-		for curr > squaredNums[w] {
-			fmt.Println("The value", curr, "is greater than", squaredNums[w], "at index", w)
-			w++
+		for j, num := range squaredNums {
+			fmt.Println("Current value", num, "at index", j, "is compared with", currNumber)
+			if currNumber > num {
+				currNumberIndex++
+			}
 		}
 
-		if curr < squaredNums[w] {
-			w--
+		for _, num := range sortedArray {
+			if currNumber != 0 && currNumber == num {
+				currNumberIndex++
+			}
 		}
 
-		fmt.Println("The current value", curr, "will replace the value", squaredNums[w], "at index:", w)
+		fmt.Println("The value", currNumber, "will be inserted at index:", currNumberIndex)
+		sortedArray[currNumberIndex] = currNumber
 
-		var temp = squaredNums[w]
-		squaredNums[w] = curr
-		squaredNums[i] = temp
+		fmt.Println("Array at this step:", sortedArray)
 		i++
-
-		fmt.Println("Array status at this step:", squaredNums)
-		fmt.Println()
 	}
 
-	fmt.Print("Sorted array:", squaredNums)
-	return squaredNums
+	fmt.Println("Sorted array:", sortedArray)
+	return sortedArray
 }

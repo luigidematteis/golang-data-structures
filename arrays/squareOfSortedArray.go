@@ -3,7 +3,7 @@ package arrays
 import "fmt"
 
 /*
-	Sorting function with time complexity of O(n log n) and space complexity of O(n)
+	Sorting function with time complexity of O(n^2) and space complexity of O(n)
 */
 func SortedSquares(nums []int) []int {
 	fmt.Println("Original array:", nums)

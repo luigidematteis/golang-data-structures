@@ -88,6 +88,8 @@ func main() {
 		950, 952, 960, 960, 961, 968, 970, 971, 973, 973, 977, 979, 980, 983, 986, 992, 992, 992, 993, 995, 996,
 		997})
 
+	// sliding windows
+	arrays.FindLength([]int{3, 1, 2, 7, 4, 2, 1, 1, 5}, 8)
 }
 
 func letMeKnowIfPalindrome(word string) {

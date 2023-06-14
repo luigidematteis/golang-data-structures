@@ -119,6 +119,24 @@ func MaximumAverageSubarray(nums []int, k int) float64 {
 	return result
 }
 
+func MaxAverageSubarray_2(nums []int, k int) float64 {
+	var left = 0
+	var currentTotal int
+	var maxTotal int
+	for i, num := range nums {
+		if i-left+1 > k {
+			currentTotal -= nums[left]
+			left++
+		}
+		currentTotal += num
+		if currentTotal > maxTotal || left == 0 {
+			maxTotal = currentTotal
+		}
+	}
+	fmt.Println("Result:", float64(maxTotal)/float64(k))
+	return float64(maxTotal) / float64(k)
+}
+
 func maxFloat64(x float64, y float64) float64 {
 	if x > y {
 		return x

@@ -32,13 +32,9 @@ func FindLengthOfSubarrayWithSumLessThanK(nums []int, k int) int {
 	return result
 }
 
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
-}
-
+/*
+	FindNumOfSubarrayWithProductLessThanK find the number of subarray with product less than K
+*/
 func FindNumOfSubarrayWithProductLessThanK(nums []int, k int) int {
 	fmt.Println()
 	fmt.Println("Hello from Sliding Window: FindNumOfSubarrayWithProductLessThanK")
@@ -135,6 +131,13 @@ func MaxAverageSubarray_2(nums []int, k int) float64 {
 	}
 	fmt.Println("Result:", float64(maxTotal)/float64(k))
 	return float64(maxTotal) / float64(k)
+}
+
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
 }
 
 func maxFloat64(x float64, y float64) float64 {

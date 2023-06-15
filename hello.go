@@ -5,7 +5,7 @@ import "learning/arrays"
 
 func main() {
 
-	var current string = "part2"
+	var current string = "prefix_sum"
 
 	if current == "part1" {
 		fmt.Println("Hello, World!")
@@ -134,7 +134,16 @@ func main() {
 
 		// running sum
 		arrays.RunningSum([]int{1, 2, 3, 4})
+	}
 
+	if current == "prefix_sum" {
+		// minimum value to get positive step by step sum
+		arrays.MinStartValue([]int{-3, 2, -3, 4, 2})
+		arrays.MinStartValue([]int{1, -2, -3})
+		arrays.MinStartValue([]int{-5, -2, 4, 4, -2})
+		arrays.MinStartValue([]int{2, 3, 5, -5, -1})
+		arrays.MinStartValue([]int{1, 2})
+		arrays.MinStartValue([]int{4, 2, -1})
 	}
 
 }

@@ -132,6 +132,9 @@ func main() {
 		arrays.WaysToSplitArray([]int{10, 4, -8, 7})
 		arrays.WaysToSplitArray2([]int{10, 4, -8, 7})
 
+		// running sum
+		arrays.RunningSum([]int{1, 2, 3, 4})
+
 	}
 
 }

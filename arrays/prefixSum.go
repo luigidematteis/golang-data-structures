@@ -104,3 +104,19 @@ func WaysToSplitArray2(nums []int) int {
 	fmt.Println("Result:", ans)
 	return ans
 }
+
+/*
+	Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+	Return the running sum of nums.
+*/
+func RunningSum(nums []int) []int {
+	fmt.Println()
+	fmt.Println("Hello from RunningSum")
+	prefix := make([]int, len(nums))
+	prefix[0] = nums[0]
+	for i := 1; i < len(nums); i++ {
+		prefix[i] = prefix[i-1] + nums[i]
+	}
+	fmt.Println("Result:", prefix)
+	return prefix
+}

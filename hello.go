@@ -123,6 +123,8 @@ func main() {
 
 	if current == "part2" {
 		arrays.MaxConsecutiveOnes([]int{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2)
+
+		arrays.AnswerQueries([]int{1, 6, 3, 2, 7, 2}, [][]int{{0, 3}, {2, 5}, {2, 4}}, 13)
 	}
 
 }

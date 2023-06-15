@@ -25,24 +25,23 @@ func MinStartValue(nums []int) int {
 	fmt.Println()
 	fmt.Println("Hello from MinStartValue")
 	fmt.Println("Nums:", nums)
-	prefix := make([]int, len(nums))
+	n := len(nums)
+	prefix := make([]int, n)
 	prefix[0] = nums[0]
-	var minPrefix = prefix[0]
-	for i := 1; i < len(nums); i++ {
+	minPrefix := prefix[0]
+	for i := 1; i < n; i++ {
 		prefix[i] = prefix[i-1] + nums[i]
 		if prefix[i] < minPrefix {
 			minPrefix = prefix[i]
 		}
 	}
-
 	fmt.Println("Min prefix:", minPrefix)
 	fmt.Println(prefix)
-
 	if minPrefix > 0 {
 		fmt.Println("Result:", minPrefix)
 		return 1
+	} else {
+		fmt.Println("Result:", int(math.Abs(float64(minPrefix))+1))
+		return 1 - minPrefix
 	}
-
-	fmt.Println("Result:", int(math.Abs(float64(minPrefix))+1))
-	return int(math.Abs(float64(minPrefix)) + 1)
 }

@@ -5,7 +5,7 @@ import "learning/arrays"
 
 func main() {
 
-	var current string = "prefix_sum"
+	var current string = "kradius"
 
 	if current == "part1" {
 		fmt.Println("Hello, World!")
@@ -144,6 +144,11 @@ func main() {
 		arrays.MinStartValue([]int{2, 3, 5, -5, -1})
 		arrays.MinStartValue([]int{1, 2})
 		arrays.MinStartValue([]int{4, 2, -1})
+	}
+
+	if current == "kradius" {
+		// k-radius subarray average
+		arrays.GetAverage([]int{7, 4, 3, 9, 1, 8, 5, 2, 6}, 3)
 	}
 
 }

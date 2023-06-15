@@ -54,3 +54,23 @@ func GetAverage(nums []int, k int) []int {
 
 	return kRadius
 }
+
+func GetAverage2(nums []int, k int) []int {
+	n := len(nums)
+	for i := 1; i < n; i++ {
+		nums[i] += nums[i-1]
+	}
+	kRadius := make([]int, n)
+	for i := 0; i < n; i++ {
+		if i >= k && i < n-k {
+			temp := nums[i+k]
+			if i-k > 0 {
+				temp -= nums[i-k-1]
+			}
+			kRadius[i] = temp / (k*2 + 1)
+		} else {
+			kRadius[i] = -1
+		}
+	}
+	return kRadius
+}

@@ -27,7 +27,9 @@ func ReverseWords(s string) string {
 				rs = append(rs, st[temp-1])
 				temp--
 			}
-			rs = append(rs, " ")
+			if i != len(s)-1 {
+				rs = append(rs, " ")
+			}
 			left = i
 			left++
 		}

@@ -122,9 +122,14 @@ func main() {
 	}
 
 	if current == "part2" {
+		// maximum of consecutive ones in an array representing a binary number
 		arrays.MaxConsecutiveOnes([]int{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2)
 
+		// answer to queries that are true if the sum of the subarray from x to y is less than limit
 		arrays.AnswerQueries([]int{1, 6, 3, 2, 7, 2}, [][]int{{0, 3}, {2, 5}, {2, 4}}, 13)
+
+		// ways to split an array
+		arrays.WaysToSplitArray([]int{10, 4, -8, 7})
 	}
 
 }

@@ -43,3 +43,45 @@ func AnswerQueries(nums []int, queries [][]int, limit int) []bool {
 	fmt.Println("Result:", ans)
 	return ans
 }
+
+/*
+	Given an integer array nums, find the number of ways to split the array into two parts so that the first section
+	has a sum greater than or equal to the sum of the second section. The second section should have at least one
+	number.
+*/
+func WaysToSplitArray(nums []int) int {
+	fmt.Println()
+	fmt.Println("Hello from WaysToSplitArray")
+	// declare variable for iterations
+	n := len(nums)
+
+	// create slice for prefix array
+	prefix := make([]int, len(nums))
+
+	// assign the value of nums[0] as first element of the prefix array
+	prefix[0] = nums[0]
+
+	// process the prefix array
+	for i := 1; i < n; i++ {
+		prefix[i] = prefix[i-1] + nums[i]
+	}
+
+	// declare variable for the result
+	ans := 0
+
+	// calculate how many subarray that respect the constraint are present
+	for i := 0; i < n-1; i++ {
+		// the sum of the left section is retrieved by taking the i element from the prefix array
+		sumOfLeftSection := prefix[i]
+		// the sum of the right section is calculated by taking the last element of the prefix array
+		// that correspond to the sum of all the elements in the nums array and subtracting the prefix[i]
+		// that correspond to the sum of all the elements until the index i
+		sumOfRightSection := prefix[n-1] - prefix[i]
+		// if the sum of left section is greater than the right one, the answer will be updated
+		if sumOfLeftSection > sumOfRightSection {
+			ans++
+		}
+	}
+	fmt.Println("Result:", ans)
+	return ans
+}

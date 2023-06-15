@@ -5,7 +5,7 @@ import "learning/arrays"
 
 func main() {
 
-	var current string = "kradius"
+	var current string = "reverseString3"
 
 	if current == "part1" {
 		fmt.Println("Hello, World!")
@@ -149,6 +149,10 @@ func main() {
 	if current == "kradius" {
 		// k-radius subarray average
 		arrays.GetAverage([]int{7, 4, 3, 9, 1, 8, 5, 2, 6}, 3)
+	}
+
+	if current == "reverseString3" {
+		arrays.ReverseWords("Let's take LeetCode contest")
 	}
 
 }

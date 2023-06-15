@@ -78,7 +78,26 @@ func WaysToSplitArray(nums []int) int {
 		// that correspond to the sum of all the elements until the index i
 		sumOfRightSection := prefix[n-1] - prefix[i]
 		// if the sum of left section is greater than the right one, the answer will be updated
-		if sumOfLeftSection > sumOfRightSection {
+		if sumOfLeftSection >= sumOfRightSection {
+			ans++
+		}
+	}
+	fmt.Println("Result:", ans)
+	return ans
+}
+
+// WaysToSplitArray2 is the improved version of WaysToSplitArray with space complexity of O(1)
+func WaysToSplitArray2(nums []int) int {
+	fmt.Println()
+	fmt.Println("Hello from WaysToSplitArray2")
+	ans, leftSection, total := 0, 0, 0
+	for _, num := range nums {
+		total += num
+	}
+	for i := 0; i < len(nums)-1; i++ {
+		leftSection += nums[i]
+		rightSection := total - leftSection
+		if leftSection >= rightSection {
 			ans++
 		}
 	}

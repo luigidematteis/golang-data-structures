@@ -130,6 +130,8 @@ func main() {
 
 		// ways to split an array
 		arrays.WaysToSplitArray([]int{10, 4, -8, 7})
+		arrays.WaysToSplitArray2([]int{10, 4, -8, 7})
+
 	}
 
 }

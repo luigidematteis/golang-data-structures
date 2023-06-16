@@ -47,9 +47,10 @@ func ReverseWords2(s string) string {
 	checkpoint := -1
 	for i := 0; i < n; i++ {
 		if s[i] == ' ' || i == n-1 {
-			isLastIndex := i == n-1
-			if isLastIndex {
+			isLastIndex := false
+			if i == n-1 {
 				i++
+				isLastIndex = true
 			}
 			for j := i - 1; j > checkpoint; j-- {
 				ans = append(ans, s[j])
@@ -62,4 +63,8 @@ func ReverseWords2(s string) string {
 	}
 	fmt.Println(string(ans))
 	return string(ans)
+}
+
+func ReverseOnlyLetters(s string) string {
+	return ""
 }

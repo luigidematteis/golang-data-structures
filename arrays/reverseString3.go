@@ -37,3 +37,29 @@ func ReverseWords(s string) string {
 	fmt.Println(strings.Join(rs, ""))
 	return strings.Join(rs, "")
 }
+
+// ReverseWords2
+// Input: s = "Let's take LeetCode contest"
+// Output: "s'teL ekat edoCteeL tsetnoc"
+func ReverseWords2(s string) string {
+	n := len(s)
+	var ans []byte
+	checkpoint := -1
+	for i := 0; i < n; i++ {
+		if s[i] == ' ' || i == n-1 {
+			isLastIndex := i == n-1
+			if isLastIndex {
+				i++
+			}
+			for j := i - 1; j > checkpoint; j-- {
+				ans = append(ans, s[j])
+			}
+			if !isLastIndex {
+				ans = append(ans, byte(' '))
+			}
+			checkpoint = i
+		}
+	}
+	fmt.Println(string(ans))
+	return string(ans)
+}

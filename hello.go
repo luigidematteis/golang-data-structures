@@ -152,7 +152,8 @@ func main() {
 	}
 
 	if current == "reverseString3" {
-		arrays.ReverseWords("Let's take LeetCode contest")
+		//arrays.ReverseWords("Let's take LeetCode contest")
+		arrays.ReverseWords2("Let's take LeetCode contest")
 	}
 
 }

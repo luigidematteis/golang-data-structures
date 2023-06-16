@@ -5,7 +5,7 @@ import "learning/arrays"
 
 func main() {
 
-	var current string = "reverseString3"
+	var current string = "twopointer"
 
 	if current == "part1" {
 		fmt.Println("Hello, World!")
@@ -152,10 +152,15 @@ func main() {
 	}
 
 	if current == "reverseString3" {
-		//arrays.ReverseWords("Let's take LeetCode contest")
-		//arrays.ReverseWords2("Let's take LeetCode contest")
-		//arrays.ReverseOnlyLetters("a-bC-dEf-ghIj")
+		arrays.ReverseWords("Let's take LeetCode contest")
+		arrays.ReverseWords2("Let's take LeetCode contest")
+		arrays.ReverseOnlyLetters("a-bC-dEf-ghIj")
 		arrays.ReverseOnlyLetters("z<*zj")
+	}
+
+	if current == "twopointer" {
+		arrays.MoveZeros([]int{0, 1, 0, 3, 12})
+		arrays.MoveZeros([]int{1, 0})
 	}
 
 }

@@ -97,3 +97,47 @@ func ReverseOnlyLetters(s string) string {
 	fmt.Println(string(ans))
 	return string(ans)
 }
+
+/*
+	Given a 0-indexed string word and a character ch, reverse the segment of word that starts at index 0 and ends at
+	the index of the first occurrence of ch (inclusive). If the character ch does not exist in word, do nothing.
+	For example, if word = "abcdefd" and ch = "d", then you should reverse the segment that starts at 0 and ends
+	at 3 (inclusive). The resulting string will be "dcbaefd".
+	Return the resulting string.
+	Example:
+	Input: word = "abcdefd", ch = "d"
+	Output: "dcbaefd"
+*/
+func reversePrefix(word string, ch byte) string {
+	w := -1
+	n := len(word)
+	rs := make([]byte, n)
+	for i := 0; i < n; i++ {
+		if word[i] == ch && i != 0 && w == -1 {
+			r := i
+			for j := 0; j <= r; j++ {
+				fmt.Println("j ->", j)
+				fmt.Println("r ->", r)
+				fmt.Println(string(rs[j]), string(word[r]))
+				fmt.Println(string(rs[r]), string(word[j]))
+				rs[j] = word[r]
+				rs[r] = word[j]
+				r--
+				fmt.Println("j ->", j)
+				fmt.Println("r ->", r)
+				fmt.Println("Array at this step:", string(rs))
+			}
+			w = i
+		}
+		if w != -1 && w != i {
+			rs[i] = word[i]
+		}
+	}
+	if rs[0] != ch || word[0] == ch || word[n-1] == ch && w == -1 {
+		fmt.Println("return word")
+		return word
+	}
+	fmt.Println(string(rs))
+	fmt.Println("return rs")
+	return string(rs)
+}

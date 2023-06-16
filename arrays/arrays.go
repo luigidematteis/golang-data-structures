@@ -4,7 +4,7 @@ import "fmt"
 
 func CallMethodsInPackageArray() {
 
-	var current = "twopointer"
+	var current = "reverseprefix"
 
 	if current == "part1" {
 		fmt.Println("Hello, World!")
@@ -163,6 +163,12 @@ func CallMethodsInPackageArray() {
 
 		MoveZeros2([]int{0, 1, 0, 3, 12})
 		MoveZeros2([]int{1, 0})
+	}
+
+	if current == "reverseprefix" {
+		//reversePrefix("abcdefd", 'd')
+		//reversePrefix("lweefee", 'f')
+		reversePrefix("rzwuktxcjfpamlonbgyieqdvhs", 's')
 	}
 }
 

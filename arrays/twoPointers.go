@@ -51,3 +51,33 @@ func MoveZeros(nums []int) {
 	}
 	fmt.Println(nums)
 }
+
+func MoveZeros2(nums []int) {
+	w := 0
+	r := len(nums) - 1
+	for i := 0; i <= r; i++ {
+		if nums[i] != 0 {
+			nums[w] = nums[i]
+			w++
+		}
+	}
+	for j := r; j >= w; j-- {
+		nums[j] = 0
+	}
+	fmt.Println(nums)
+}
+
+func MoveZeros3(nums []int) {
+	w := 0
+	r := len(nums) - 1
+	for i := 0; i <= r; i++ {
+		if nums[i] != 0 {
+			nums[w] = nums[i]
+			if i != w {
+				nums[i] = 0
+			}
+			w++
+		}
+	}
+	fmt.Println(nums)
+}

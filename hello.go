@@ -159,8 +159,11 @@ func main() {
 	}
 
 	if current == "twopointer" {
-		arrays.MoveZeros([]int{0, 1, 0, 3, 12})
-		arrays.MoveZeros([]int{1, 0})
+		//arrays.MoveZeros([]int{0, 1, 0, 3, 12})
+		//arrays.MoveZeros([]int{1, 0})
+
+		arrays.MoveZeros2([]int{0, 1, 0, 3, 12})
+		arrays.MoveZeros2([]int{1, 0})
 	}
 
 }

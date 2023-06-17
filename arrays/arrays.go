@@ -4,7 +4,7 @@ import "fmt"
 
 func CallMethodsInPackageArray() {
 
-	var current = "minimalsubarraylenght"
+	var current = "msl2"
 
 	if current == "part1" {
 		fmt.Println("Hello, World!")
@@ -171,13 +171,24 @@ func CallMethodsInPackageArray() {
 		reversePrefix("rzwuktxcjfpamlonbgyieqdvhs", 's')
 	}
 
-	if current == "minimalsubarraylenght" {
-		MinSubarrayLenght([]int{2, 3, 1, 2, 4, 3}, 7)
-		MinSubarrayLenght([]int{1, 2, 3, 4, 5}, 15)
-		MinSubarrayLenght([]int{1, 1, 1, 1, 1, 3, 2}, 5)
-		MinSubarrayLenght([]int{10, 2, 3}, 6)
-		MinSubarrayLenght([]int{2, 14}, 15)
-		MinSubarrayLenght([]int{5, 1, 3, 5, 10, 7, 4, 9, 2, 8}, 15)
+	if current == "minimalsubarraylenght1" {
+		MinSubarrayLength([]int{2, 3, 1, 2, 4, 3}, 7)
+		MinSubarrayLength([]int{1, 2, 3, 4, 5}, 15)
+		MinSubarrayLength([]int{1, 1, 1, 1, 1, 3, 2}, 5)
+		MinSubarrayLength([]int{10, 2, 3}, 6)
+		MinSubarrayLength([]int{2, 14}, 15)
+		MinSubarrayLength([]int{5, 1, 3, 5, 10, 7, 4, 9, 2, 8}, 15)
+	}
+
+	if current == "msl2" {
+		MinSubarrayLength2([]int{2, 3, 1, 2, 4, 3}, 7)
+		MinSubarrayLength2([]int{1, 2, 3, 4, 5}, 15)
+		MinSubarrayLength2([]int{1, 1, 1, 1, 1, 3, 2}, 5)
+		MinSubarrayLength2([]int{10, 2, 3}, 6)
+		MinSubarrayLength2([]int{2, 14}, 15)
+		MinSubarrayLength2([]int{5, 1, 3, 5, 10, 7, 4, 9, 2, 8}, 15)
+		MinSubarrayLength2([]int{5, 1, 1, 4, 10, 3, 4, 9, 2, 8, 10, 5, 1}, 15)
+		MinSubarrayLength2([]int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 15)
 	}
 }
 

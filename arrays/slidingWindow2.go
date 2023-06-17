@@ -37,7 +37,7 @@ func MaxConsecutiveOnes(nums []int, k int) int {
 	Output: 2
 	Explanation: The subarray [4,3] has the minimal length under the problem constraint.
 */
-func MinSubarrayLenght(nums []int, target int) int {
+func MinSubarrayLength(nums []int, target int) int {
 	fmt.Println()
 	fmt.Println("Array:", nums)
 	fmt.Println("Target:", target)
@@ -51,7 +51,7 @@ func MinSubarrayLenght(nums []int, target int) int {
 		sum += num
 		fmt.Println("Sum:", sum)
 		if i == len(nums)-1 && w == 0 && sum == target {
-			fmt.Println("Return i", i+1)
+			fmt.Println("Return i+1", i+1)
 			i++
 			return i
 		}
@@ -80,4 +80,44 @@ func MinSubarrayLenght(nums []int, target int) int {
 	}
 	fmt.Println("Return w that is:", w)
 	return w
+}
+
+func MinSubarrayLength2(nums []int, target int) int {
+	ans := int(1e9)
+	n := len(nums)
+	r := 0
+	cs := 0
+
+	prefix := make([]int, n)
+	prefix[0] = nums[0]
+	for i := 1; i < n; i++ {
+		if nums[i] == target {
+			fmt.Println("result:", 1)
+			return 1
+		}
+		prefix[i] = prefix[i-1] + nums[i]
+	}
+	fmt.Println(prefix)
+
+	for i := 0; i < n; i++ {
+		cs = 0
+		if prefix[i] >= target {
+			r = i
+			for cs < target && r > 0 {
+				cs += nums[r]
+				if cs < target && r > 0 {
+					r--
+				}
+			}
+			if i-r+1 < ans {
+				ans = i - r + 1
+			}
+		}
+	}
+	if ans == int(1e9) {
+		fmt.Println("result:", 0)
+		return 0
+	}
+	fmt.Println("result:", ans)
+	return ans
 }

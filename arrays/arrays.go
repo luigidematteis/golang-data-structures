@@ -4,7 +4,7 @@ import "fmt"
 
 func CallMethodsInPackageArray() {
 
-	var current = "reverseprefix"
+	var current = "minimalsubarraylenght"
 
 	if current == "part1" {
 		fmt.Println("Hello, World!")
@@ -166,9 +166,18 @@ func CallMethodsInPackageArray() {
 	}
 
 	if current == "reverseprefix" {
-		//reversePrefix("abcdefd", 'd')
-		//reversePrefix("lweefee", 'f')
+		reversePrefix("abcdefd", 'd')
+		reversePrefix("lweefee", 'f')
 		reversePrefix("rzwuktxcjfpamlonbgyieqdvhs", 's')
+	}
+
+	if current == "minimalsubarraylenght" {
+		MinSubarrayLenght([]int{2, 3, 1, 2, 4, 3}, 7)
+		MinSubarrayLenght([]int{1, 2, 3, 4, 5}, 15)
+		MinSubarrayLenght([]int{1, 1, 1, 1, 1, 3, 2}, 5)
+		MinSubarrayLenght([]int{10, 2, 3}, 6)
+		MinSubarrayLenght([]int{2, 14}, 15)
+		MinSubarrayLenght([]int{5, 1, 3, 5, 10, 7, 4, 9, 2, 8}, 15)
 	}
 }
 

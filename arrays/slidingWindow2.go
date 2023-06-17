@@ -121,3 +121,7 @@ func MinSubarrayLength2(nums []int, target int) int {
 	fmt.Println("result:", ans)
 	return ans
 }
+
+func MinLengthSubarray3(nums []int, target int) int {
+	return 0
+}

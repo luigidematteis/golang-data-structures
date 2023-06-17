@@ -4,7 +4,7 @@ import "fmt"
 
 func CallMethodsInPackageArray() {
 
-	var current = "msl2"
+	var current = "msl3"
 
 	if current == "part1" {
 		fmt.Println("Hello, World!")
@@ -189,6 +189,17 @@ func CallMethodsInPackageArray() {
 		MinSubarrayLength2([]int{5, 1, 3, 5, 10, 7, 4, 9, 2, 8}, 15)
 		MinSubarrayLength2([]int{5, 1, 1, 4, 10, 3, 4, 9, 2, 8, 10, 5, 1}, 15)
 		MinSubarrayLength2([]int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 15)
+	}
+
+	if current == "msl3" {
+		MinLengthSubarray3([]int{2, 3, 1, 2, 4, 3}, 7)
+		MinLengthSubarray3([]int{1, 2, 3, 4, 5}, 11)
+		MinLengthSubarray3([]int{1, 1, 1, 1, 1, 3, 2}, 5)
+		MinLengthSubarray3([]int{10, 2, 3}, 6)
+		MinLengthSubarray3([]int{2, 14}, 15)
+		MinLengthSubarray3([]int{5, 1, 3, 5, 10, 7, 4, 9, 2, 8}, 15)
+		MinLengthSubarray3([]int{5, 1, 1, 4, 10, 3, 4, 9, 2, 8, 10, 5, 1}, 15)
+		MinLengthSubarray3([]int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 15)
 	}
 }
 

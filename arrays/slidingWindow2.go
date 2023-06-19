@@ -122,6 +122,7 @@ func MinSubarrayLength2(nums []int, target int) int {
 	return ans
 }
 
-func MinLengthSubarray3(nums []int, target int) int {
+func MinSubarrayLength3(nums []int, target int) int {
+
 	return 0
 }

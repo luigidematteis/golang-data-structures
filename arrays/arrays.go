@@ -2,11 +2,9 @@ package arrays
 
 import "fmt"
 
-func CallMethodsInPackageArray() {
+func CallMethodsInPackageArray(prev bool) {
 
-	var current = "msl3"
-
-	if current == "part1" {
+	if prev {
 		fmt.Println("Hello, World!")
 
 		// check if the words are palindromes
@@ -118,9 +116,7 @@ func CallMethodsInPackageArray() {
 			5406, -6300, -275, -1908, 67, 3569, 1433, -7262, -437, 8303, 4498, -379, 3054, -6285, 4203, 6908, 4433, 3077, 2288, 9733, -8067,
 			3007, 9725, 9669, 1362, -2561, -4225, 5442, -9006, -429, 160, -9234, -4444, 3586, -5711, -9506, -79, -4418, -4348, -5891}, 93)
 		MaxAverageSubarray_2([]int{6, 8, 6, 8, 0, 4, 1, 2, 10, 10, 9, 9}, 2)
-	}
 
-	if current == "part2" {
 		// maximum of consecutive ones in an array representing a binary number
 		MaxConsecutiveOnes([]int{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2)
 
@@ -133,9 +129,7 @@ func CallMethodsInPackageArray() {
 
 		// running sum
 		RunningSum([]int{1, 2, 3, 4})
-	}
 
-	if current == "prefix_sum" {
 		// minimum value to get positive step by step sum
 		MinStartValue([]int{-3, 2, -3, 4, 2})
 		MinStartValue([]int{1, -2, -3})
@@ -143,44 +137,28 @@ func CallMethodsInPackageArray() {
 		MinStartValue([]int{2, 3, 5, -5, -1})
 		MinStartValue([]int{1, 2})
 		MinStartValue([]int{4, 2, -1})
-	}
 
-	if current == "kradius" {
 		// k-radius subarray average
 		GetAverage([]int{7, 4, 3, 9, 1, 8, 5, 2, 6}, 3)
-	}
 
-	if current == "reverseString3" {
 		ReverseWords("Let's take LeetCode contest")
 		ReverseWords2("Let's take LeetCode contest")
 		ReverseOnlyLetters("a-bC-dEf-ghIj")
 		ReverseOnlyLetters("z<*zj")
-	}
 
-	if current == "twopointer" {
 		MoveZeros([]int{0, 1, 0, 3, 12})
 		MoveZeros([]int{1, 0})
 
 		MoveZeros2([]int{0, 1, 0, 3, 12})
 		MoveZeros2([]int{1, 0})
-	}
 
-	if current == "reverseprefix" {
-		reversePrefix("abcdefd", 'd')
-		reversePrefix("lweefee", 'f')
-		reversePrefix("rzwuktxcjfpamlonbgyieqdvhs", 's')
-	}
-
-	if current == "minimalsubarraylenght1" {
 		MinSubarrayLength([]int{2, 3, 1, 2, 4, 3}, 7)
 		MinSubarrayLength([]int{1, 2, 3, 4, 5}, 15)
 		MinSubarrayLength([]int{1, 1, 1, 1, 1, 3, 2}, 5)
 		MinSubarrayLength([]int{10, 2, 3}, 6)
 		MinSubarrayLength([]int{2, 14}, 15)
 		MinSubarrayLength([]int{5, 1, 3, 5, 10, 7, 4, 9, 2, 8}, 15)
-	}
-
-	if current == "msl2" {
+		
 		MinSubarrayLength2([]int{2, 3, 1, 2, 4, 3}, 7)
 		MinSubarrayLength2([]int{1, 2, 3, 4, 5}, 15)
 		MinSubarrayLength2([]int{1, 1, 1, 1, 1, 3, 2}, 5)
@@ -189,18 +167,17 @@ func CallMethodsInPackageArray() {
 		MinSubarrayLength2([]int{5, 1, 3, 5, 10, 7, 4, 9, 2, 8}, 15)
 		MinSubarrayLength2([]int{5, 1, 1, 4, 10, 3, 4, 9, 2, 8, 10, 5, 1}, 15)
 		MinSubarrayLength2([]int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 15)
+
+		MinSubarrayLength3([]int{2, 3, 1, 2, 4, 3}, 7)
+		MinSubarrayLength3([]int{1, 2, 3, 4, 5}, 11)
+		MinSubarrayLength3([]int{1, 1, 1, 1, 1, 3, 2}, 5)
+		MinSubarrayLength3([]int{10, 2, 3}, 6)
+		MinSubarrayLength3([]int{2, 14}, 15)
+		MinSubarrayLength3([]int{5, 1, 3, 5, 10, 7, 4, 9, 2, 8}, 15)
+		MinSubarrayLength3([]int{5, 1, 1, 4, 10, 3, 4, 9, 2, 8, 10, 5, 1}, 15)
+		MinSubarrayLength3([]int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 15)
 	}
 
-	if current == "msl3" {
-		MinLengthSubarray3([]int{2, 3, 1, 2, 4, 3}, 7)
-		MinLengthSubarray3([]int{1, 2, 3, 4, 5}, 11)
-		MinLengthSubarray3([]int{1, 1, 1, 1, 1, 3, 2}, 5)
-		MinLengthSubarray3([]int{10, 2, 3}, 6)
-		MinLengthSubarray3([]int{2, 14}, 15)
-		MinLengthSubarray3([]int{5, 1, 3, 5, 10, 7, 4, 9, 2, 8}, 15)
-		MinLengthSubarray3([]int{5, 1, 1, 4, 10, 3, 4, 9, 2, 8, 10, 5, 1}, 15)
-		MinLengthSubarray3([]int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 15)
-	}
 }
 
 func letMeKnowIfPalindrome(word string) {

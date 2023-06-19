@@ -3,5 +3,5 @@ package main
 import "learning/arrays"
 
 func main() {
-	arrays.CallMethodsInPackageArray()
+	arrays.CallMethodsInPackageArray(false)
 }

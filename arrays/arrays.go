@@ -105,17 +105,17 @@ func CallMethodsInPackageArray(prev bool) {
 			5406, -6300, -275, -1908, 67, 3569, 1433, -7262, -437, 8303, 4498, -379, 3054, -6285, 4203, 6908, 4433, 3077, 2288, 9733, -8067,
 			3007, 9725, 9669, 1362, -2561, -4225, 5442, -9006, -429, 160, -9234, -4444, 3586, -5711, -9506, -79, -4418, -4348, -5891}, 93)
 
-		MaxAverageSubarray_2([]int{5}, 1)
-		MaxAverageSubarray_2([]int{1, 4, 2, 3, 2}, 5)
-		MaxAverageSubarray_2([]int{1, 12, -5, -6, 50, 3}, 4)
-		MaxAverageSubarray_2([]int{-1}, 1)
-		MaxAverageSubarray_2([]int{4, 0, 4, 3, 3}, 5)
-		MaxAverageSubarray_2([]int{8860, -853, 6534, 4477, -4589, 8646, -6155, -5577, -1656, -5779, -2619, -8604, -1358, -8009,
+		Maxaveragesubarray2([]int{5}, 1)
+		Maxaveragesubarray2([]int{1, 4, 2, 3, 2}, 5)
+		Maxaveragesubarray2([]int{1, 12, -5, -6, 50, 3}, 4)
+		Maxaveragesubarray2([]int{-1}, 1)
+		Maxaveragesubarray2([]int{4, 0, 4, 3, 3}, 5)
+		Maxaveragesubarray2([]int{8860, -853, 6534, 4477, -4589, 8646, -6155, -5577, -1656, -5779, -2619, -8604, -1358, -8009,
 			4983, 7063, 3104, -1560, 4080, 2763, 5616, -2375, 2848, 1394, -7173, -5225, -8244, -809, 8025, -4072, -4391, -9579, 1407, 6700,
 			2421, -6685, 5481, -1732, -8892, -6645, 3077, 3287, -4149, 8701, -4393, -9070, -1777, 2237, -3253, -506, -4931, -7366, -8132,
 			5406, -6300, -275, -1908, 67, 3569, 1433, -7262, -437, 8303, 4498, -379, 3054, -6285, 4203, 6908, 4433, 3077, 2288, 9733, -8067,
 			3007, 9725, 9669, 1362, -2561, -4225, 5442, -9006, -429, 160, -9234, -4444, 3586, -5711, -9506, -79, -4418, -4348, -5891}, 93)
-		MaxAverageSubarray_2([]int{6, 8, 6, 8, 0, 4, 1, 2, 10, 10, 9, 9}, 2)
+		Maxaveragesubarray2([]int{6, 8, 6, 8, 0, 4, 1, 2, 10, 10, 9, 9}, 2)
 
 		// maximum of consecutive ones in an array representing a binary number
 		MaxConsecutiveOnes([]int{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2)
@@ -158,7 +158,7 @@ func CallMethodsInPackageArray(prev bool) {
 		MinSubarrayLength([]int{10, 2, 3}, 6)
 		MinSubarrayLength([]int{2, 14}, 15)
 		MinSubarrayLength([]int{5, 1, 3, 5, 10, 7, 4, 9, 2, 8}, 15)
-		
+
 		MinSubarrayLength2([]int{2, 3, 1, 2, 4, 3}, 7)
 		MinSubarrayLength2([]int{1, 2, 3, 4, 5}, 15)
 		MinSubarrayLength2([]int{1, 1, 1, 1, 1, 3, 2}, 5)
@@ -177,6 +177,11 @@ func CallMethodsInPackageArray(prev bool) {
 		MinSubarrayLength3([]int{5, 1, 1, 4, 10, 3, 4, 9, 2, 8, 10, 5, 1}, 15)
 		MinSubarrayLength3([]int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 15)
 	}
+
+	MaxVowelsInSubstring("abciiidef", 3)
+	MaxVowelsInSubstring("leetcode", 3)
+	MaxVowelsInSubstring("novowels", 1)
+	MaxVowelsInSubstring("tnfazcwrryitgacaabwm", 4)
 
 }
 

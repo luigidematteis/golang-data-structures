@@ -24,8 +24,7 @@ func FindLengthOfSubarrayWithSumLessThanK(nums []int, k int) int {
 			left++
 		}
 
-		result = max(result, i-left+1)
-
+		result = Max(result, i-left+1)
 	}
 
 	fmt.Println("Result:", result)
@@ -115,7 +114,7 @@ func MaximumAverageSubarray(nums []int, k int) float64 {
 	return result
 }
 
-func MaxAverageSubarray_2(nums []int, k int) float64 {
+func Maxaveragesubarray2(nums []int, k int) float64 {
 	var left = 0
 	var currentTotal int
 	var maxTotal int
@@ -133,7 +132,7 @@ func MaxAverageSubarray_2(nums []int, k int) float64 {
 	return float64(maxTotal) / float64(k)
 }
 
-func max(x, y int) int {
+func Max(x, y int) int {
 	if x > y {
 		return x
 	}
